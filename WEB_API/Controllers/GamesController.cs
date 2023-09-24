@@ -15,6 +15,12 @@ namespace WEB_API.Controllers
             _gameDbContext = gamesDbContext;
         }
 
+        [HttpPost(Name = "ImportAllGames")]
+        public IEnumerable<Game> PostAllGames() {
+
+            return _gameDbContext.Games.ToList();
+        }
+
         [HttpGet(Name = "GetAllGames")]
         public IEnumerable<Game> GetAllGames() {
             return _gameDbContext.Games.ToList();
