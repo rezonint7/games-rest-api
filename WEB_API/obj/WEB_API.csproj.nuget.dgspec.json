@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rzcomp\\Desktop\\games-rest-api\\WEB_API\\WEB_API.csproj": {}
+    "C:\\Users\\wefer\\OneDrive\\Рабочий стол\\games-rest-api\\WEB_API\\WEB_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rzcomp\\Desktop\\games-rest-api\\WEB_API\\WEB_API.csproj": {
+    "C:\\Users\\wefer\\OneDrive\\Рабочий стол\\games-rest-api\\WEB_API\\WEB_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rzcomp\\Desktop\\games-rest-api\\WEB_API\\WEB_API.csproj",
+        "projectUniqueName": "C:\\Users\\wefer\\OneDrive\\Рабочий стол\\games-rest-api\\WEB_API\\WEB_API.csproj",
         "projectName": "WEB_API",
-        "projectPath": "C:\\Users\\rzcomp\\Desktop\\games-rest-api\\WEB_API\\WEB_API.csproj",
-        "packagesPath": "C:\\Users\\rzcomp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rzcomp\\Desktop\\games-rest-api\\WEB_API\\obj\\",
+        "projectPath": "C:\\Users\\wefer\\OneDrive\\Рабочий стол\\games-rest-api\\WEB_API\\WEB_API.csproj",
+        "packagesPath": "C:\\Users\\wefer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wefer\\OneDrive\\Рабочий стол\\games-rest-api\\WEB_API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "S:\\Program Files (x86)\\Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\rzcomp\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\wefer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
