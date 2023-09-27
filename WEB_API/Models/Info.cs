@@ -1,5 +1,6 @@
 ﻿namespace WEB_API.Models {
     public class Info {
+
         public string GameId { get; set; }
         public Game Game { get; set; }
         public string Developer { get; set; }

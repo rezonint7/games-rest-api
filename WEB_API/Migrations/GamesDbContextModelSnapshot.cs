@@ -157,11 +157,9 @@ namespace WEB_API.Migrations
 
             modelBuilder.Entity("WEB_API.Models.Game", b =>
                 {
-                    b.Navigation("Info")
-                        .IsRequired();
+                    b.Navigation("Info");
 
-                    b.Navigation("SystemRequirements")
-                        .IsRequired();
+                    b.Navigation("SystemRequirements");
                 });
 #pragma warning restore 612, 618
         }

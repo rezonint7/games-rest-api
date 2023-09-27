@@ -8,8 +8,8 @@ namespace WEB_API.Models
         public string Description { get; set; }
         public string Image { get; set; }
         public string Images { get; set; }
-        public Info Info { get; set; }
-        public SystemRequirements SystemRequirements { get; set; }
+        public Info? Info { get; set; }
+        public SystemRequirements? SystemRequirements { get; set; }
         public virtual int CategoryId { get; set; } 
         public Category Category { get; set; }
     }

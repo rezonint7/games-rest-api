@@ -81,7 +81,7 @@ namespace WEB_API.Controllers
 
                     foreach (var gameEntry in categoryEntry.games) {
                         var gameId = Guid.NewGuid().ToString();
-                       
+
                         //System.InvalidOperationException:
                         //"The instance of entity type 'Info' cannot be tracked because another instance with the same key value for {'GameId'} is already being tracked.
                         //When attaching existing entities, ensure that only one entity instance with a given key value is attached.
@@ -90,36 +90,36 @@ namespace WEB_API.Controllers
                         //var existingInfo = _gameDbContext.Info.SingleOrDefault(info => info.GameId == gameId);
                         //if(existingInfo != null) _gameDbContext.Entry(existingInfo).State = EntityState.Detached;
 
-                        _gameDbContext.Info.Add(new Info {
-                            GameId = gameId,
-                            Developer = gameEntry.Value.info.developer,
-                            Genre = gameEntry.Value.info.genre,
-                            Language = gameEntry.Value.info.language,
-                            ReleaseYear = gameEntry.Value.info.release_year,
-                            Version = gameEntry.Value.info.version
-                        });
-                        await _gameDbContext.SaveChangesAsync();
-                        //var existingSystemRequirements = _gameDbContext.SystemRequirements.SingleOrDefault(s => s.GameId == gameId);
-                        //if (existingSystemRequirements != null) _gameDbContext.Entry(existingSystemRequirements).State = EntityState.Detached;
+                        //var g = new Game { Title = "" };
+                        //g.SystemRequirements = new SystemRequirements { };
+                        //g.Info = new Info { };
+                        //_gameDbContext.Games.Add(g);
 
-                        _gameDbContext.SystemRequirements.Add(new SystemRequirements {
-                            GameId = gameId,
-                            CPU = gameEntry.Value.system_requirements["CPU"],
-                            GPU = gameEntry.Value.system_requirements["GPU"],
-                            HDD = gameEntry.Value.system_requirements["HDD"],
-                            OS = gameEntry.Value.system_requirements["OS"],
-                            RAM = gameEntry.Value.system_requirements["RAM"],
-                        });
-                        await _gameDbContext.SaveChangesAsync();
-                        //var existingGame = _gameDbContext.Games.SingleOrDefault(game => game.Id == gameId);
-                        //if (existingGame != null) _gameDbContext.Entry(existingGame).State = EntityState.Detached;
-
-                        _gameDbContext.Games.Add(new Game {
+                        _gameDbContext.Games.Add(new Game
+                        {
                             Id = gameId,
                             Title = gameEntry.Value.title,
                             Description = gameEntry.Value.description,
                             Image = gameEntry.Value.image,
                             Images = String.Join("; ", gameEntry.Value.images),
+                            Info = new Info
+                            {
+                                GameId = gameId,
+                                Developer = gameEntry.Value.info.developer,
+                                Genre = gameEntry.Value.info.genre,
+                                Language = gameEntry.Value.info.language,
+                                ReleaseYear = gameEntry.Value.info.release_year,
+                                Version = gameEntry.Value.info.version,
+                            },
+                            SystemRequirements = new SystemRequirements
+                            {
+                                GameId = gameId,
+                                CPU = gameEntry.Value.system_requirements["CPU"],
+                                GPU = gameEntry.Value.system_requirements["GPU"],
+                                HDD = gameEntry.Value.system_requirements["HDD"],
+                                OS = gameEntry.Value.system_requirements["OS"],
+                                RAM = gameEntry.Value.system_requirements["RAM"],
+                            },
                             CategoryId = _gameDbContext.Category.OrderBy(c => c.Id).Last().Id,
                         });
                         await _gameDbContext.SaveChangesAsync();
